@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/goc3vdb.css">
+  <script src="./scripts/conversor-romano.js" defer></script>
+  <script src="https://kit.fontawesome.com/a60ef87bb8.js" crossorigin="anonymous"></script>
+
+
+  <title>Conversor de Números Romanos</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="./index.html">Conversor Romano-Arábico</a></li>
+      <li><a href="./jogo-da-vida.html">Jogo da Vida</a></li>
+      <li><a href="./divisor-contas.html">Divisor de conta</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="input-container">
+      <h2 id="title">Conversor de Romano Para Arábico</h2>
+  
+      <form id="input-form" onsubmit="event.preventDefault(); return checkInput(this)">
+        <label for="input-romano">Romano:</label>
+        <input autocomplete="off" type="text" id="input-romano" placeholder="Ex: XVIII" pattern="[A-Za-z]*"/>
+        
+        <label for="input-arabico">Arábico:</label>
+        <input readonly type="number" id="input-arabico" placeholder="Resultado"/>
+      </form>
+  
+      <span>
+        <label class="btn secondary" id="switch-btn" for="switch-checkbox"><i class="fa-solid fa-repeat"></i> Trocar</label>
+        <input id="switch-checkbox" type="checkbox" value="Converter" style="display:none"/>
+        <input class="btn " form="input-form" type="submit" id="submit-btn" value="Converter"/>
+      </span>
+    </div>
+  </main>
+
+</body>
+</html>
+
